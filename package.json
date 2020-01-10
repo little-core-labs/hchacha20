@@ -32,7 +32,8 @@
   },
   "standard": {
     "ignore": [
-      "dist"
+      "dist",
+      "hchacha20.js"
     ]
   }
 }
