@@ -45,14 +45,6 @@
       (loop $start_loop
         (br_if $end_loop (i32.le_u (get_local $i) (i32.const 10)))
 
-        (set_local $A (i32.add (get_local $A) (get_local $B)))
-        (set_local $D (i32.rotl (i32.xor (get_local $D) (get_local $A)) (i32.const 16)))
-        (set_local $C (i32.add (get_local $C) (get_local $D)))
-        (set_local $B (i32.rotl (i32.xor (get_local $B) (get_local $C)) (i32.const 12)))
-        (set_local $A (i32.add (get_local $A) (get_local $B)))
-        (set_local $D (i32.rotl (i32.xor (get_local $D) (get_local $A)) (i32.const 8)))
-        (set_local $C (i32.add (get_local $C) (get_local $D)))
-        (set_local $B (i32.rotl (i32.xor (get_local $B) (get_local $C)) (i32.const 7)))
         ;; QUARTERROUND(x0, x4, x8, x12);
         (set_local $x0 (i32.add (get_local $x0) (get_local $x4)))
         (set_local $x12 (i32.rotl (i32.xor (get_local $x12) (get_local $x0)) (i32.const 16)))
