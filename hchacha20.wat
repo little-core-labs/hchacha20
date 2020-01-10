@@ -40,7 +40,7 @@
     (set_local $x15 (i32.load (i32.add (get_local $in_ptr) (i32.const 12))))
 
     (set_local $i (i32.const 0))
-    (block $end_loopa
+    (block $end_loop
       (loop $start_loop
         (br_if $end_loop (i32.le_u (get_local $i) (i32.const 10)))
         ;; See https://github.com/jedisct1/libsodium/blob/master/src/libsodium/crypto_core/hchacha20/core_hchacha20.c

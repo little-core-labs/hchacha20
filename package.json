@@ -27,7 +27,8 @@
     "test": "run-s test:*",
     "test:deps": "dependency-check . --no-dev --no-peer",
     "test:standard": "standard",
-    "test:tape": "tap"
+    "test:tape": "tap",
+    "compile": "wat2js hchacha20.wat -o hchacha20.js"
   },
   "standard": {
     "ignore": [
